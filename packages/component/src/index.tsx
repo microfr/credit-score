@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import Loader from '@microfr/loader'
 import "./styles.local.scss";
 
 const CREDIT_QUERY = gql`
@@ -22,16 +22,21 @@ const _Creditscore: React.FunctionComponent = () => {
       id: "1"
     }
   });
-  if(loading) return <div>loading</div>
-  return <div className="cs">
-      {data.creditScore.scores.map((score: any) => <>{score.agency}<div className="cs__score">{score.creditScore}</div></>)}
-      </div>
+  if (loading) return <div>Loading</div>;
+  return (
+    <div className="cs">
+      {data.creditScore.scores.map((score: any, i: number) => (
+        <React.Fragment key={i}>
+          {score.agency}
+          <div className="cs__score">
+            {score.creditScore}
+          </div>
+        </React.Fragment>
+      ))}
+    </div>
+  );
 };
 
 _Creditscore.displayName = "Creditscore";
-
-_Creditscore.propTypes = {
-  name: PropTypes.string.isRequired
-};
 
 export default React.memo(_Creditscore);

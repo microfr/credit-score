@@ -10,7 +10,7 @@ const externals = {
     'prop-types': 'PropTypes',
     'graphql': 'graphql',
     '@apollo/react-hooks': '@apollo/react-hooks',
-    'apollo-boost': 'apollo-boost'
+    'apollo-boost': 'ApolloBoost'
 }
 
 let webpackConfig = {
