@@ -23,7 +23,7 @@ exports.getCreditScore = async (parent, { id }, { user }) => {
           })
         });
         const {data: result} = await data.json();
-      
+        
         return result.creditScore;
     } catch(err) {
         throw new Error(err)
