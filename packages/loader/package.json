@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "@microfr/error-boundary": "^1.0.0",
-    "@microfr/loader": "^1.0.9",
+    "@microfr/loader": "^1.1.1",
     "@microfr/use-script": "^1.0.1"
   }
 }

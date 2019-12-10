@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const IS_DEV = process.env.NODE_ENV === "development";
 
-console.log(path.resolve(__dirname, "..", "server", "./node_modules/react"));
 const externals = {
   react: 'commonjs react',
   "prop-types": {

@@ -11,6 +11,8 @@ window['@apollo/react-hooks'] = fromHooks
 
 const NODE = document.querySelector("#app");
 
+localStorage.setItem('token', '1')
+
 render(
     <Loader />,
   NODE

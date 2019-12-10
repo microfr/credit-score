@@ -12,12 +12,19 @@ module.exports = gql`
         scores: [CreditScoreNode]
     }
 
+    type User {
+        id: ID!
+        firstName: String!
+        lastName: String!
+        creditScore: CreditScoreConnection
+    }
+
     type Asset {
         src: String!
     }
 
     type Query {
-        creditScore(id: ID!): CreditScoreConnection
+        viewer: User
         asset(namespace: String!): Asset
     }
 `
